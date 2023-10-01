@@ -1,0 +1,93 @@
+.college {
+    background: url(images/BackGroundki.jpg);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    padding: 50px 0; /* Add padding for space between sections */
+    opacity: 0;
+    transform: translateY(20px); /* Initial position below */
+    transition: opacity 1s, transform 1s;
+
+}
+
+.college:hover {
+    opacity: 1;
+    transform: translateY(0); /* Move to the original position */
+}
+
+.college-img img {
+    padding-bottom: 20%;
+    max-width: 630px;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.college-about-text h2 {
+    font-size: 60px;
+
+}
+
+.college-about-text h2 span {
+    color: #0ef;
+}
+
+.college-about-text h4 {
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+
+.college-about-text p {
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Initial position below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Move to the original position */
+    }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .college {
+        grid-template-columns: 1fr; /* Change to a single column layout on smaller screens */
+        text-align: center; /* Center align text on smaller screens */
+        padding: 20px 0; /* Reduce padding for smaller screens */
+    }
+
+    .college-img img {
+        max-width: 100%;
+        height: auto;
+        width: 80%; /* Reduce image width on smaller screens */
+        margin: 0 auto; /* Center align image */
+    }
+
+    .college-about-text h2 {
+        font-size: 3rem; /* Reduce font size for smaller screens */
+    }
+
+    .college-about-text h4 {
+        font-size: 1.6rem; /* Reduce font size for smaller screens */
+    }
+
+    .college-about-text p {
+        font-size: 1.2rem; /* Reduce font size for smaller screens */
+    }
+}
+
+/* Pause animation on hover */
+
+
+

@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', 'sans-serif';
+}
+
+html {
+  width: 100%;
+  justify-content: space-between;
+  height: 100vh;
+  background-size: contain;
+  background-position: center;
+  /* Initial opacity set to 0 */
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+body {
+  color: gold;
+  /* background: #081b29; */
+}
+
+.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 3%;
+  background: honeydew;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.navbar a {
+  display: inline-block;
+  font-size: 25px;
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 15px;
+  transition: .3s;
+  opacity: 0;
+  animation: slideTop .5s ease forwards;
+}
+
+.navbar a:hover {
+  background: #0ef;
+  color: #081b29;
+  box-shadow: 0 0 20px #0ef;
+}
+
+.home {
+  position: relative;
+  margin-bottom: 1px;
+  background-size: auto;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  background: url("images/back.jpg") no-repeat;
+  padding: 90px 10% 0;
+  opacity: 0;
+  /* Initial opacity set to 0 */
+  animation: fadeIn 1s ease-in-out forwards;
+  /* Apply the fade-in animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.home-content {
+  max-width: 600px;
+  margin-top: 150px;
+}
+
+.home-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+  opacity: 0;
+  animation: slideBottom 1s ease forwards;
+  animation-delay: .7s;
+}
+
+.home-content h3:nth-of-type(2) {
+  margin-bottom: 30px;
+}
+
+.home-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+  margin: -3px 0;
+  opacity: 0;
+  animation-name: slideRight;
+  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.home-content p {
+  font-size: 20px;
+  opacity: 0;
+  animation-name: slideLeft;
+  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.home-sci img {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  background: transparent;
+  border: 2px solid #0ef;
+  border-radius: 50%;
+  color: #0ef;
+  text-decoration: none;
+  margin: 30px 15px 30px 0;
+  transition: .5s;
+  opacity: 0;
+  animation-name: slideRight;
+  animation-timing-function: ease forwards;
+  animation-duration: 1s;
+  animation-delay: calc(.2s*var(--i));
+  animation-fill-mode: forwards;
+}
+
+.home-sci a:hover {
+  background: #0ef;
+  color: #081b29;
+  box-shadow: 0 0 20px #0ef;
+}
+
+.home-content h3:nth-of-type(2) {
+  margin-bottom: 30px;
+  font-weight: 700;
+  animation-delay: .7s;
+}
+
+.home-content h3 span {
+  color: #0ef;
+}
+
+footer {
+  background-color: red;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.btn-box {
+  margin-top: 60px;
+  display: inline-block;
+  padding: 12px 28px;
+  background: #0ef;
+  border-radius: 40px;
+  margin-bottom: 80px;
+  font-size: 16px;
+  color: #081b29;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  animation-name: slideTop;
+  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-delay: calc(.2s*(--i));
+  animation-fill-mode: forwards;
+  box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+}
+
+.btn-box:hover {
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+}
+
+.btn-box1 {
+  margin-top: 60px;
+  margin: 20px;
+  display: inline-block;
+  padding: 12px 28px;
+  background: #0ef;
+  border-radius: 40px;
+  margin-bottom: 80px;
+  font-size: 16px;
+  color: #081b29;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  animation-name: slideTop;
+  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-delay: calc(.2s*(--i));
+  animation-fill-mode: forwards;
+  box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+}
+
+.btn-box1:hover {
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+}
+
+.btn-box2 {
+  margin-top: 60px;
+  display: inline-block;
+  padding: 12px 28px;
+  background: #0ef;
+  border-radius: 40px;
+  margin-bottom: 80px;
+  font-size: 16px;
+  color: #081b29;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  animation-name: slideTop;
+  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-delay: calc(.2s*(--i));
+  animation-fill-mode: forwards;
+  box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+}
+
+.btn-box2:hover {
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideBottom {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* Common styles for .anime and .animee */
+.anime, .animee {
+  width: 100%;
+  max-width: 275px;
+  margin: 0 auto;
+  animation-name: slideTop;
+  overflow: hidden;
+  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+.animee img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  opacity: 0;
+  animation-name: slideTop;
+  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  .home-content h1 {
+    font-size: 40px; /* Adjust font size for smaller screens */
+  }
+  
+  .btn-box, .btn-box1, .btn-box2 {
+    padding: 10px 20px; /* Adjust button padding for smaller screens */
+  }
+
+  .anime, .animee {
+    max-width: 100%; /* Remove the maximum width on smaller screens */
+    margin-left: 0; /* Remove the left margin */
+  }
+
+  .animee img {
+    max-width: 100%; /* Remove the maximum width for the image */
+  }
+
+  .home {
+    padding-top: 60px; /* Adjust top padding for smaller screens */
+  }
+}

@@ -1,0 +1,126 @@
+/* Body styles */
+body {
+  background-image: url('images/BackGroundki.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container styles */
+.container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+  transition: transform 0.2s;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.login-form,
+.signup-form,
+.forgot-password-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.signup-form,
+.forgot-password-form {
+  display: none;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  body {
+    background-size: auto; /* Adjust background size for smaller screens */
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%; /* Full width on smaller screens */
+  }
+
+  .form-container {
+    max-width: 100%; /* Full width on smaller screens */
+  }
+
+  .login-form,
+  .signup-form,
+  .forgot-password-form {
+    height: auto; /* Allow forms to expand vertically on smaller screens */
+  }
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.form-group input[type="password"] {
+  width: 100%;
+}
+
+.form-group input[type="checkbox"] {
+  display: inline-block; /* Display the checkbox on the same line */
+  vertical-align: middle; /* Align the checkbox vertically with the text */
+}
+
+.form-group label[for="showPassword"] {
+  display: inline-block; /* Display the label on the same line */
+  vertical-align: middle; /* Align the label vertically with the checkbox */
+}
+

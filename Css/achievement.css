@@ -1,0 +1,59 @@
+/* Animation for the .achievement section */
+.achievement {
+    background: url(images/BackGroundki.jpg);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    position: relative; /* Added for absolute positioning of text and image */
+}
+
+/* Image Animation */
+.achievement-img img {
+    padding-bottom: 20%;
+    max-width: 630px;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(20px); /* Initial position below */
+    transition: opacity 1s, transform 1s;
+}
+
+/* Text Animation */
+.achievement-about-text h2 {
+    font-size: 60px;
+    opacity: 0;
+    transform: translateY(20px); /* Initial position below */
+    transition: opacity 1s, transform 1s;
+}
+
+.achievement-about-text h4 {
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+    opacity: 0;
+    transform: translateY(20px); /* Initial position below */
+    transition: opacity 1s, transform 1s;
+}
+
+.achievement-about-text p {
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4;
+    opacity: 0;
+    transform: translateY(20px); /* Initial position below */
+    transition: opacity 1s, transform 1s;
+}
+
+/* Apply animations on hover or other desired events */
+.achievement:hover .achievement-img img,
+.achievement:hover .achievement-about-text h2,
+.achievement:hover .achievement-about-text h4,
+.achievement:hover .achievement-about-text p {
+    opacity: 1;
+    transform: translateY(0); /* Move to the original position */
+}

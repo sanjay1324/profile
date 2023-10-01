@@ -1,0 +1,90 @@
+/* Animation for the .moreaboutme section */
+.moreaboutme {
+    background: url(images/BackGroundki.jpg);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    position: relative; /* Added for absolute positioning of text and image */
+}
+
+/* Image Animation */
+.moreaboutme-img {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 80%; /* Ensure the container takes up the full height */
+}
+
+.moreaboutme-img img {
+    max-width: 50%; /* Make sure the image doesn't exceed the container width */
+    height: auto;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(20px); /* Initial position below */
+    transition: opacity 1s, transform 1s;
+}
+
+/* Text Animation */
+.moreaboutme-about-text h2 {
+    font-size: 60px;
+    opacity: 0;
+    transform: translateY(20px); /* Initial position below */
+    transition: opacity 1s, transform 1s;
+}
+
+.moreaboutme-about-text h4 {
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+    opacity: 0;
+    transform: translateY(20px); /* Initial position below */
+    transition: opacity 1s, transform 1s;
+}
+
+.moreaboutme-about-text p {
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4;
+    opacity: 0;
+    transform: translateY(20px); /* Initial position below */
+    transition: opacity 1s, transform 1s;
+}
+
+/* Apply animations on hover or other desired events */
+.moreaboutme:hover .moreaboutme-img img,
+.moreaboutme:hover .moreaboutme-about-text h2,
+.moreaboutme:hover .moreaboutme-about-text h4,
+.moreaboutme:hover .moreaboutme-about-text p {
+    opacity: 1;
+    transform: translateY(0); /* Move to the original position */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    transform: translateX(-100%);
+    animation: slideIn 1s forwards ease-in-out;
+}
+
+li:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+    }
+}

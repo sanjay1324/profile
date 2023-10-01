@@ -1,0 +1,39 @@
+/* Add your CSS styles here */
+
+/* Header styles */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.header p {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navbar {
+    background-color: #444;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 16px;
+}
